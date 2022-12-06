@@ -1,0 +1,116 @@
+.inputTask {
+    margin-top: calc(0px - 1.5rem - 1px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 46rem;
+}
+
+.inputTask > * {
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.inputTask > input {
+    width: 40rem;
+    border: 1px solid var(--gray-700);
+    background: var(--gray-500);
+    color: var(--gray-100);
+}
+
+.inputTask > input::placeholder {
+    color: var(--gray-300);
+}
+
+.inputTask > button {
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    background: var(--dark-blue);
+    color: var(--gray-100);
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.inputTask > button:hover {
+    background: var(--blue);
+}
+
+.tasksBoard {
+    display: flex;
+    flex-direction: column;
+    width: 46rem;
+    margin-top: 4rem;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .tasksBoard, .inputTask {
+        max-width: 23rem;
+     }
+}
+
+.tasksBoard .tasksInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tasksBoard .tasksInfo p{
+    display: flex;
+    line-height: 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    gap: 0.5rem;
+}
+
+.tasksBoard .tasksInfo > p:first-child {
+    color: var(--blue);
+}
+
+.tasksBoard .tasksInfo > p:last-child {
+    color: var(--dark-purple);
+}
+
+.tasksBoard .tasksInfo > p > span {
+    background: var(--gray-400);
+    color: var(--gray-100);
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+}
+
+.tasksBoard .tasksContent {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--gray-400);
+    gap: 1rem;
+}
+
+.tasksBoard .tasksContent > svg{
+    line-height: 0.250rem;
+    color: var(--gray-400)
+}
+
+.tasksBoard .tasksContent > p {
+    display: flex;
+    flex-direction: column;
+    color: var(--gray-300);
+    text-align: center;
+}
+
+.tasksBoard .tasksContent > p span:first-child {
+    font-weight: bold;
+}
